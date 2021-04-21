@@ -8,8 +8,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint:eslint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
-    "lint:prettier": "prettier --check .",
+    "lint": "eslint . --ext js,jsx,ts,tsx,json",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx,json}",
     "postinstall": "husky install"
   },
   "husky": {
@@ -19,8 +19,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-      "yarn lint:eslint",
-      "yarn lint:prettier"
+      "yarn lint",
+      "yarn format"
     ]
   },
   "dependencies": {
