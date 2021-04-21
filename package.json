@@ -17,8 +17,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-      "yarn lint:eslint",
-      "yarn lint:prettier"
+      "eslint . --ext js,jsx,ts,tsx --max-warnings=0"
     ]
   },
   "dependencies": {
