@@ -1,14 +1,16 @@
 {
-  "name": "next_sample",
+  "name": "sake_io",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "lint:eslint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
-    "lint:prettier": "prettier --check ."
+    "lint:prettier": "prettier --check .",
+    "postinstall": "husky install"
   },
   "husky": {
     "hooks": {
@@ -17,7 +19,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint . --ext js,jsx,ts,tsx --max-warnings=0"
+      "yarn lint:eslint",
+      "yarn lint:prettier"
     ]
   },
   "dependencies": {
