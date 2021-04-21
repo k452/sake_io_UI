@@ -16,24 +16,9 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.{js,jsx,ts,tsx,json}": [
       "yarn lint:eslint",
       "yarn lint:prettier"
-    ],
-    "*.ts": [
-      "yarn lint:eslint",
-      "yarn lint:prettier"
-    ],
-    "*.jsx": [
-      "yarn lint:eslint",
-      "yarn lint:prettier"
-    ],
-    "*.tsx": [
-      "yarn lint:eslint",
-      "yarn lint:prettier"
-    ],
-    "*.json": [
-      "prettier --write"
     ]
   },
   "dependencies": {
