@@ -3,8 +3,8 @@ module.exports = {
     return [
       {
         source: '/:any*',
-        destination: '/',
-      },
+        destination: '/'
+      }
     ]
-  },
+  }
 }
