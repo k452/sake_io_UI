@@ -7,10 +7,12 @@ const MainApp: React.FC = () => {
       <Header />
       <ul>
         <li>
-          <Link href='/' as='/'>Home</Link>
+          <Link href="/" as="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href='/recipe' as='/recipe'>
+          <Link href="/recipe" as="/recipe">
             酒豪のレシピ
           </Link>
         </li>

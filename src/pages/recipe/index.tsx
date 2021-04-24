@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container'
-import RecipeCard from 'pages/components/recipeCard'
 
+import RecipeCard from 'pages/components/recipeCard'
 import Header from 'pages/header'
 
-const Recipe: React.FC = () => {
+const RecipeList: React.FC = () => {
   return (
     <div>
       <Header />
@@ -19,4 +19,4 @@ const Recipe: React.FC = () => {
   )
 }
 
-export default Recipe
+export default RecipeList

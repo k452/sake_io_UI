@@ -2,9 +2,9 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/:any*',
-        destination: '/'
-      }
-    ]
-  }
-}
+        source: "/:any*",
+        destination: "/",
+      },
+    ];
+  },
+};
