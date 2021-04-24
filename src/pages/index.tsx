@@ -12,7 +12,7 @@ const MainApp: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="/recipe" as="/recipe">
+          <Link href="/recipeList" as="/recipeList">
             酒豪のレシピ
           </Link>
         </li>

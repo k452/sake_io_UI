@@ -12,7 +12,7 @@ const RecipeList: React.FC = () => {
         <RecipeCard
           title="グレンフィディック"
           imgSrc="https://media.glenfiddich.com/assets/Uploads/Flagship2019/glenfiddich-12-year-old-tile.jpg"
-          text="グレンフィディック12年のトゥワイスアップの究極のレシピを紹介するぜ!..."
+          text="グレンフィディック12年のトゥワイスアップの究極のレシピを紹介!..."
         />
       </Container>
     </div>

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         <Nav className="mr-auto">
           <Nav.Link href="#features">Myページ</Nav.Link>
           <NavDropdown title="レシピ" id="collasible-nav-dropdown">
-            <Link href="/recipe" as="/recipe">
+            <Link href="/recipeList" as="/recipeList">
               <NavDropdown.Item href="#action/3.1">
                 酒豪のレシピ
               </NavDropdown.Item>
