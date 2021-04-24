@@ -11,10 +11,14 @@ const Header: React.FC = () => {
         <Nav className="mr-auto">
           <Nav.Link href="#features">Myページ</Nav.Link>
           <NavDropdown title="レシピ" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">みんなのレシピを探す</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.1">
+              みんなのレシピを探す
+            </NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">レシピを投稿</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">投稿したレシピを削除</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.4">
+              投稿したレシピを削除
+            </NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
