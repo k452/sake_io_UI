@@ -1,9 +1,6 @@
 import Link from 'next/link'
 import Header from 'pages/header'
 
-//BootStrapのCSSを全体に読み込み
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 const MainApp: React.FC = () => {
   return (
     <div>
@@ -13,8 +10,8 @@ const MainApp: React.FC = () => {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/hoge" as="/hoge">
-            Hoge Page
+          <Link href="/recipe" as="/recipe">
+            酒豪のレシピ
           </Link>
         </li>
       </ul>
