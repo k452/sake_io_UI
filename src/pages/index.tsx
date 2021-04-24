@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import Header from 'pages/header'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const MainApp: React.FC = () => {
   return (
     <div>
+      <Header/>
       <ul>
         <li>
           <Link href="/" >Home</Link>
