@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { AppProps } from 'next/app'
 
-const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+const _App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <div suppressHydrationWarning>
       {typeof window === 'undefined' ? null : <Component {...pageProps} />}
@@ -9,4 +9,4 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-export default App
+export default _App

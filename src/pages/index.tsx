@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Header from 'pages/header'
-import Footer from 'pages/footer'
+
+//BootStrapのCSSを全体に読み込み
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const MainApp: React.FC = () => {
@@ -17,7 +18,6 @@ const MainApp: React.FC = () => {
           </Link>
         </li>
       </ul>
-      <Footer />
     </div>
   )
 }
