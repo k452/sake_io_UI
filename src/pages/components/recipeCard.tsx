@@ -1,10 +1,12 @@
 import Card from 'react-bootstrap/Card'
-
 import Link from 'next/link'
 
 const RecipeCard: React.FC<T.cardProps> = (props: T.cardProps) => {
   return (
-    <Link href="/recipe/[id]" as="/recipe/0">
+    <Link href={{
+      pathname: '/recipe/[recipeId]',
+      query: {recipeId: 'a'}
+    }}>
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={props.imgSrc} />
         <Card.Body>

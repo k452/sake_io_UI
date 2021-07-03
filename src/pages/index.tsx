@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import Header from 'pages/header'
 
 const MainApp: React.FC = () => {
   return (
     <div>
-      <Header />
       <ul>
         <li>
           <Link href="/" as="/">

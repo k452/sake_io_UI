@@ -1,12 +1,9 @@
 import Container from 'react-bootstrap/Container'
-
 import RecipeCard from 'pages/components/recipeCard'
-import Header from 'pages/header'
 
 const RecipeList: React.FC = () => {
   return (
     <div>
-      <Header />
       <h1>酒豪のレシピ</h1>
       <Container>
         <RecipeCard
