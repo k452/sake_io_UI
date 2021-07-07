@@ -9,12 +9,22 @@ const RecipeCard: React.FC<Props.cardProps> = (props: Props.cardProps) => {
         recipeId: props.path
       }
     }}>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.imgSrc} />
+      <Card
+        style={{
+          width: '18rem',
+          height: '20rem',
+          margin: '10px'
+        }}
+      >
+        <Card.Img
+          variant="top"
+          src={props.imgSrc}
+          style={{
+            height: '15rem'
+          }}
+        />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
-          <hr></hr>
-          <Card.Text>{props.text}</Card.Text>
         </Card.Body>
       </Card>
     </Link>

@@ -14,6 +14,7 @@ const RecipeList: FC<GetStatic.rowedRecipesStatic> = ({ recipes }: GetStatic.row
           recipes.map((arr: API.recipe[], i: number) => (
             <Row
               key={i}
+              md={3}
             >
               {
                 arr.map((v: API.recipe, j: number) => (
@@ -64,6 +65,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       recipes
     },
-    revalidate: 10
+    revalidate: 600
   }
 }
