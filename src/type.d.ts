@@ -10,6 +10,9 @@ declare namespace GetStatic {
   type recipesStatic = {
     recipes: API.recipe[]
   }
+  type rowedRecipesStatic = {
+    recipes: API.recipe[][]
+  }
 }
 declare namespace API {
   type recipe = {

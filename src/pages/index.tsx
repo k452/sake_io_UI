@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const MainApp: React.FC = () => {
   return (
-    <div>
+    <>
       <ul>
         <li>
           <Link href="/" as="/">
@@ -15,7 +15,7 @@ const MainApp: React.FC = () => {
           </Link>
         </li>
       </ul>
-    </div>
+    </>
   )
 }
 

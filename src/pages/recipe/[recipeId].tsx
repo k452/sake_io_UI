@@ -3,11 +3,11 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 
 const Recipe: React.FC<GetStatic.recipesStatic> = ({recipes}: GetStatic.recipesStatic) => {
   return (
-    <div>
+    <>
       <h1>{recipes[0].title}</h1>
       <Image src={recipes[0].sumbnail.toString()} width={200} height={200} />
       <p>{recipes[0].text}</p>
-    </div>
+    </>
   )
 }
 
