@@ -25,3 +25,10 @@ declare namespace API {
     updated_At: string
   }
 }
+
+declare namespace Form {
+  type signin = {
+    mail: string
+    pass: string
+  }
+}

@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { AppProps } from 'next/app'
 import Header from 'pages/header'
+import '../../styles.css'
 
 const _App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (

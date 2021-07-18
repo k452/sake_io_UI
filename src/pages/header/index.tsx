@@ -30,10 +30,12 @@ const Header: React.FC = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="#deets">設定</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
-            テーマを変える
-          </Nav.Link>
+          <Link href="/signin" as="/signin">
+            <Nav.Link href="/signin">ログイン</Nav.Link>
+          </Link>
+          <Link href="/signup" as="/signup">
+            <Nav.Link href="/signup">アカウント作成</Nav.Link>
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
