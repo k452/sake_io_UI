@@ -1,44 +1,24 @@
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import NavDropdown from 'react-bootstrap/NavDropdown'
-
 import Link from 'next/link'
-
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Header: React.FC = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Link href="/" as="/">
-        <Navbar.Brand href="#">さけ.io</Navbar.Brand>
-      </Link>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#features">Myページ</Nav.Link>
-          <NavDropdown title="レシピ" id="collasible-nav-dropdown">
-            <Link href="/recipeList" as="/recipeList">
-              <NavDropdown.Item href="#action/3.1">
-                酒豪のレシピ
-              </NavDropdown.Item>
-            </Link>
-            <NavDropdown.Item href="#action/3.2">レシピを投稿</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              投稿したレシピを削除
-            </NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-        <Nav>
-          <Link href="/signin" as="/signin">
-            <Nav.Link href="/signin">ログイン</Nav.Link>
-          </Link>
-          <Link href="/signup" as="/signup">
-            <Nav.Link href="/signup">アカウント作成</Nav.Link>
-          </Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <header className="text-gray-600 body-font">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg> */}
+          <span className="ml-3 text-xl">さけ.io</span>
+        </a>
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <Link href="/recipeList" as="/recipeList" ><a className="mr-5 hover:text-gray-900">酒豪のレシピ</a></Link>
+          <Link href="/signin" as="/signin" ><a className="mr-5 hover:text-gray-900">呑みグラフ</a></Link>
+          <Link href="/signin" as="/signin" ><a className="mr-5 hover:text-gray-900">ログイン</a></Link>
+          <Link href="/signup" as="/signup" ><a className="mr-5 hover:text-gray-900">アカウント作成</a></Link>
+        </nav>
+      </div>
+      <hr></hr>
+    </header>
   )
 }
 
