@@ -31,4 +31,10 @@ declare namespace Form {
     mail: string
     pass: string
   }
+  type signup = {
+    name: string
+    mail: string
+    pass: string
+    pass2: string
+  }
 }
