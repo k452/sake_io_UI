@@ -1,8 +1,12 @@
+import axios from 'axios'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-//import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+let router
 
 const Signin: React.FC = () => {
+  router = useRouter()
   const { register, handleSubmit, formState: { errors } } = useForm<Form.signin>({
     mode: 'onChange'
   })
@@ -51,18 +55,40 @@ const Signin: React.FC = () => {
         </div>
         <div className="flex items-center justify-between">
           <input
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="cursor-pointer bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
             value="ログイン"
           />
         </div>
       </form>
+      <button onClick={cookieCheck} >getAll</button>
     </div>
   )
 }
 
-const onSubmit: SubmitHandler<Form.signin> = (data) => {
-  console.log(data)
+const onSubmit: SubmitHandler<Form.signin> = (data: Form.signin) => {
+  const formData = new FormData()
+  formData.append('mail', data.mail)
+  formData.append('pass', data.pass)
+  axios.post(`${process.env.NEXT_PUBLIC_AUTH_BASE}login`, formData)
+    .then(res => {
+      console.log(res)
+      //router.push('/')
+    })
+    .catch(err => {
+      console.error(err)
+    })
+}
+
+const cookieCheck = () => {
+  // const client = axios.create({ withCredentials: true })
+  axios.get(`${process.env.NEXT_PUBLIC_AUTH_BASE}all`, { withCredentials: true })
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err => {
+      console.error(err)
+    })
 }
 
 export default Signin

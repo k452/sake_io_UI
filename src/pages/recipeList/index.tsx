@@ -43,7 +43,7 @@ const RecipeList: FC<GetStatic.recipesStatic> = ({ recipes }: GetStatic.recipesS
 export default RecipeList
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${process.env.API_BASE}recipe`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}recipe`)
   const recipes = await res.json()
 
   return {
