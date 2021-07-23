@@ -1,10 +1,11 @@
 import axios from 'axios'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { useRouter } from 'next/router'
 
-// let router
+let router
 
 const Signup: React.FC = () => {
-  // router = useRouter()
+  router = useRouter()
   const { register, getValues, handleSubmit, formState: { errors } } = useForm<Form.signup>({
     mode: 'onChange'
   })
@@ -114,7 +115,7 @@ const onSubmit: SubmitHandler<Form.signup> = (data: Form.signup) => {
     axios.post(`${process.env.NEXT_PUBLIC_AUTH_BASE}signup`, formData)
       .then(res => {
         console.log(res)
-      //router.push('/')
+        router.push('/signup/sendingMail')
       })
       .catch(err => {
         console.error(err)
