@@ -1,13 +1,21 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { AppProps } from 'next/app'
 import Header from 'pages/header'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 import '../../styles.css'
 
+nprogress.configure({ showSpinner: false, speed: 400, minimum: 0.25 })
+
 const _App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+  if (process.browser) {
+    nprogress.start()
+  }
+
+  useEffect(() => {
+    nprogress.done()
+  })
   return (
-    // <div suppressHydrationWarning>
-    //   {typeof window === 'undefined' ? null : <Component {...pageProps} />}
-    // </div>
     <>
       <Header />
       <Component {...pageProps} />
